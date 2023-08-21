@@ -1,0 +1,18 @@
+﻿@model Producer
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="card">
+    <div class="card-body">
+        <h2 class="card-title">Produce Name :  @Model.FullName</h2>
+        <p class="card-text">
+            <img src="/img/@Model.Image" class="rounded-circle" style="width:80px; height:80px" />
+        </p>
+        <p class="card-text">Produce BioGraphy :  @Model.Bio</p>
+        <p class="card-text">Produce Movies:  @Model.Movies</p>
+
+        <a href="/Producer/index" class="btn btn-primary">Back To All Produces</a>
+    </div>
+</div>
+

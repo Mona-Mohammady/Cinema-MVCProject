@@ -1,0 +1,49 @@
+﻿@model Cinema
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+    <form method="post">
+
+        <div>
+            <label asp-for="C_Name">
+            </label>
+            <input class="form-control" asp-for="C_Name" />
+            <span asp-validation-for="C_Name" class="text-danger"></span>
+        </div>
+        <br>
+        <div>
+            <label asp-for="Desc"></label>
+            <input class="form-control" asp-for="Desc" />
+            <span asp-validation-for="Desc" class="text-danger"></span>
+        </div>
+        <br>
+        <div>
+            <label asp-for="Logo"></label>
+            <input class="form-control" asp-for="Logo" />
+            <span asp-validation-for="Logo" class="text-danger"></span>
+        </div>
+        <br>
+
+        <br>
+
+    @* <div>
+    <label asp-for="Salary"></label>
+    <select class="form-control" asp-for="Salary" asp-items="deptitems">
+    <option value="0">--select department--</option>
+    </select>
+    <span asp-validation-for="dept_id" class="text-danger"></span>
+    </div>*@
+    <br>
+    <br>
+
+    <input type="submit" value="Save" action="index" class="btn btn-primary" />
+</form>
+
+@*
+@section Scripts{
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}*@

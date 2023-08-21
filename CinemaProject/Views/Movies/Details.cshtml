@@ -1,0 +1,14 @@
+﻿@model Movie
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="card">
+    <div class="card-body">
+        <h2 class="card-title">Movie Name :  @Model.Name</h2>
+        <p class="card-text">Movie Description:  @Model.Description</p>
+        <p class="card-text"><img src="/img/@Model.Image" class="rounded-circle" style="width:80px; height:80px" /></p>
+        <p class="card-text"> Price:  @Model.Price</p>
+        <a href="/Movies/index" class="btn btn-primary">Back To All Movies</a>
+    </div>
+</div>

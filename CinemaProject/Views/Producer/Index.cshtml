@@ -1,0 +1,46 @@
+﻿@model List<Producer>
+@{
+
+    ViewData["Title"] = "Index";
+}
+
+
+
+
+<div class="container">
+    <h1>All Producers</h1>
+    <a class="btn btn-primary mb-2" href="/Producer/New">Add New Produce </a>
+
+    <table class=" table table-bordered table-hover border-primary">
+        <thead>
+            <tr class="bg-black text-light">
+                <th scope="col">Image</th>
+                <th scope="col">FullName</th>
+                
+                <th scope="col">Bio</th>
+                
+                <th scope="col">Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><img src="/img/@item.Image" class="rounded-circle" style="width:80px; height:80px" /></td>
+
+                    <td>@item.FullName</td>
+                  
+                    <td>@item.Bio</td>
+                    
+                    <td>
+                        <a href="/Producer/details/@item.Id">Details</a>
+                        <a href="/Producer/edit/@item.Id">Edit</a>
+                        <a href="/Producer/delete/@item.Id">Delete</a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

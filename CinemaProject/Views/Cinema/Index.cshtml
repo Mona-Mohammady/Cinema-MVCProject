@@ -1,0 +1,50 @@
+﻿@model List<Cinema>
+@{
+
+    ViewData["Title"] = "Index";
+}
+
+
+
+
+<div class="container">
+    <h1>All Cinemas</h1>
+    <a class="btn btn-primary mb-2" href="/cinema/New">Add New Cinema </a>
+    @*  <form action="Employee/search">
+    <input type="text" name="Name" id="Name" />
+    <button type="submit" class="btn btn-primary">Search</button>
+    <a href="/Employee" class="btn btn-primary ms-3">Reset</a>
+    </form>*@
+    <table class=" table table-bordered table-hover border-primary text-center">
+        <thead>
+            <tr class="bg-black text-light">
+                <th scope="col">Logo</th>
+                <th scope="col">Cinema Name</th>
+                <th scope="col">Desc</th>
+                <th scope="col">Logo</th>
+
+                <th scope="col">Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td><img src="/img/@item.Logo" class="rounded-circle" style="width:80px; height:80px"/></td >
+                    <td>@item.C_Name</td>
+                    <td>@item.Desc</td>
+                    <td>@item.Logo</td>
+                    
+
+                    <td >
+                        <a href="/Cinema/details/@item.Id">Details</a>
+                        <a href="/Cinema/edit/@item.Id">Edit</a>
+                        <a href="/Cinema/delete/@item.Id">Delete</a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

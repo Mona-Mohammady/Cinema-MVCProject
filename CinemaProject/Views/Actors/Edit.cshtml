@@ -1,0 +1,36 @@
+﻿@model Actor
+@{
+    ViewData["Title"] = "Edit";
+    //    SelectList deptItems =
+    //        new SelectList(ViewBag.DeptList, "Id", "Name");
+}
+
+
+
+<h1 class="text-center">New Actor </h1>
+
+<form method="post">
+
+    <div>
+        <label asp-for="FullName">
+        </label>
+        <input class="form-control" asp-for="FullName" />
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+    <br>
+    <div>
+        <label asp-for="Bio"></label>
+        <input class="form-control" asp-for="Bio" />
+        <span asp-validation-for="Bio" class="text-danger"></span>
+    </div>
+    <br>
+    <div>
+        <label asp-for="Image"></label>
+        <input class="form-control" asp-for="Image" />
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+    <br>
+
+    <br>
+    <input type="submit" value="Save" action="index" class="btn btn-primary" />
+</form>
